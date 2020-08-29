@@ -196,6 +196,8 @@ recognition.addEventListener("result", (e) => {
         animateUsername(),
           say(userAnswers[0] + "?"),
           say(getRndArrItem(tokoReactions.nameReaction));
+
+        say("Tak poza tym to...", 0.9, 0.9);
         say(ziobroParts.join(), 0.8, 0.9);
       }, 700)),
     (speechyStateProcess.innerHTML = " nasłuchuje..."),
@@ -223,7 +225,7 @@ recognition.addEventListener("result", (e) => {
       }, 700);
   }),
   recognition.addEventListener("error", (e) => {
-    (speechyStateProcess.innerHTML = " nic nie usłyszał"),
+    (speechyStateProcess.innerHTML = " umarło"),
       (speechyStateProcess.style = "color: red"),
       console.log("[Error occurred in recognition: " + e.error + "]"),
       setTimeout(() => {
