@@ -116,7 +116,7 @@ function welcome() {
     say("A jak wołają na ciebie?"),
     setTimeout(() => {
       hear();
-    }, 5600);
+    }, 6000);
 }
 function hear() {
   (speechyStateProcess.innerHTML = " czeka na odpowiedź"),
